@@ -16,10 +16,12 @@ Currently, two official plugins are available:
 - npm install modern-normalize
 - change the name of project
 ____________________________
-  FORM
-- npm install formik
-- npm install yup
--
+- npm install react-router-dom
+- npm install axios
+- npm install --save clsx
+- npm install react-loader-spinner --save
+- npm install react-hot-toast
+- npm install react-icons
 -->
 
 <!-- to create react vite template:
