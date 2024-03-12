@@ -27,6 +27,9 @@ export const MovieCast = () => {
     getMovieCastById();
   }, [movieId]);
 
+  const defaultImg =
+    '<https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg>';
+
   return (
     <>
       {isLoading && <Loader />}
@@ -38,8 +41,14 @@ export const MovieCast = () => {
             return (
               <li key={actor.id}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
-                  alt={`${actor.name}'photo`}
+                  src={
+                    actor.profile_path
+                      ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                      : `https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png`
+                  }
+                  alt={actor.name}
+                  width="200"
+                  height="300"
                 />
                 <p>{actor.character}</p>
                 <p>{actor.name}</p>
