@@ -4,7 +4,7 @@ import { fetchTrendingMovies } from '../../api';
 import { Loader } from '../../components/Loader/Loader';
 import toast from 'react-hot-toast';
 
-export const HomePage = () => {
+export default function HomePage() {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -32,4 +32,4 @@ export const HomePage = () => {
       <MovieList movies={trendingMovies} />
     </>
   );
-};
+}

@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { Loader } from '../Loader/Loader';
 import styles from './MovieReviews.module.css';
 
-export const MovieReviews = () => {
+export default function MovieReviews() {
   const [response, setResponse] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -31,7 +31,9 @@ export const MovieReviews = () => {
     <>
       {isLoading && <Loader />}
       {response.length === 0 ? (
-        <div>Sorry, we don't have any reviews for this movie.</div>
+        <div className={styles.text}>
+          Sorry, we don't have any reviews for this movie.
+        </div>
       ) : (
         <ul className={styles.list}>
           {response.map(review => {
@@ -47,4 +49,4 @@ export const MovieReviews = () => {
       )}
     </>
   );
-};
+}

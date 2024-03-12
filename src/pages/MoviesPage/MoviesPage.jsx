@@ -6,7 +6,7 @@ import { fetchMoviesByQuery } from '../../api';
 import toast from 'react-hot-toast';
 import { MovieList } from '../../components/MovieList/MovieList';
 
-export const MoviesPage = () => {
+export default function MoviesPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -53,4 +53,4 @@ export const MoviesPage = () => {
       {movies.length > 0 && <MovieList movies={movies} />}
     </>
   );
-};
+}

@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { Loader } from '../Loader/Loader';
 import styles from './MovieCast.module.css';
 
-export const MovieCast = () => {
+export default function MovieCast() {
   const [response, setResponse] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -27,14 +27,13 @@ export const MovieCast = () => {
     getMovieCastById();
   }, [movieId]);
 
-  const defaultImg =
-    '<https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg>';
-
   return (
     <>
       {isLoading && <Loader />}
       {response.length === 0 ? (
-        <div>Sorry, we don't have any cast information for this movie.</div>
+        <div className={styles.text}>
+          Sorry, we don't have any cast information for this movie.
+        </div>
       ) : (
         <ul className={styles.list}>
           {response.map(actor => {
@@ -59,4 +58,4 @@ export const MovieCast = () => {
       )}
     </>
   );
-};
+}

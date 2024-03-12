@@ -14,8 +14,14 @@ export const MoviesListItem = ({ movie, backLink }) => {
         </button>
         <div className={styles.movieCard}>
           <img
-            src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+            src={
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+                : `https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png`
+            }
             alt={`${movie.title} poster`}
+            width="300"
+            height="450"
           />
           <div className={styles.movieInfo}>
             <h2>{`${movie.title} (${movie.release_date.slice(0, 4)})`}</h2>

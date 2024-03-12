@@ -13,7 +13,7 @@ export const SearchBar = ({ onSubmit }) => {
           required
           autoFocus
         />
-        <button>Search</button>
+        <button className={styles.button}>Search</button>
       </form>
     </>
   );

@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { MoviesListItem } from '../../components/MoviesListItem/MoviesListItem';
 import { Loader } from '../../components/Loader/Loader';
 
-export const MovieDetailsPage = () => {
+export default function MovieDetailsPage() {
   const [movie, setMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -35,4 +35,4 @@ export const MovieDetailsPage = () => {
       <MoviesListItem movie={movie} backLink={backLinkRef.current} />
     </>
   );
-};
+}

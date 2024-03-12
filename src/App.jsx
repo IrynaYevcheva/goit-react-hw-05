@@ -4,23 +4,23 @@ import { Loader } from './components/Loader/Loader';
 import { Navigation } from './components/Navigation/Navigation';
 import { Toaster } from 'react-hot-toast';
 
-// const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-// const MoviesPage = lazy(() => import('./pages/MoviesPage/MoviesPage'));
-// const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
-// const MovieDetailsPage = lazy(() =>
-//   import('./pages/MovieDetailsPage/MovieDetailsPage')
-// );
-// const MovieCast = lazy(() => import('./components/MovieCast/MovieCast'));
-// const MovieReviews = lazy(() =>
-//   import('./components/MovieReviews/MovieReviews')
-// );
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
+const MoviesPage = lazy(() => import('./pages/MoviesPage/MoviesPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage/NotFoundPage'));
+const MovieDetailsPage = lazy(() =>
+  import('./pages/MovieDetailsPage/MovieDetailsPage')
+);
+const MovieCast = lazy(() => import('./components/MovieCast/MovieCast'));
+const MovieReviews = lazy(() =>
+  import('./components/MovieReviews/MovieReviews')
+);
 
-import { HomePage } from './pages/HomePage/HomePage';
-import { MoviesPage } from './pages/MoviesPage/MoviesPage';
-import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
-import { MovieDetailsPage } from './pages/MovieDetailsPage/MovieDetailsPage';
-import { MovieCast } from './components/MovieCast/MovieCast';
-import { MovieReviews } from './components/MovieReviews/MovieReviews';
+// import { HomePage } from './pages/HomePage/HomePage';
+// import { MoviesPage } from './pages/MoviesPage/MoviesPage';
+// import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+// import { MovieDetailsPage } from './pages/MovieDetailsPage/MovieDetailsPage';
+// import { MovieCast } from './components/MovieCast/MovieCast';
+// import { MovieReviews } from './components/MovieReviews/MovieReviews';
 
 export default function App() {
   return (
